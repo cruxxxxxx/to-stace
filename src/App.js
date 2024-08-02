@@ -23,7 +23,7 @@ function App() {
 
     const sortedData = data.data.sort((a, b) => a.timestamp - b.timestamp);
     const message = sortedData.find(item => item.timestamp >= currentTime)?.msg || '';
-    const delay = sortedData.find(item => item.timestamp >= currentTime)?.delay || 'natural';
+    const delay = sortedData.find(item => item.timestamp >= currentTime)?.delay || 50;
     setCurrentMessage(message);
     setDelay(delay);
   }, []);
@@ -38,7 +38,7 @@ function App() {
               autoStart: true,
               cursor: "",
               delay: delay,
-              pauseFor: 5000,
+              pauseFor: 100000,
               loop: false,
             }}/>
             </div>

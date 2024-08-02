@@ -2,27 +2,33 @@ html, body {
   height: 100%; /* Ensure the body takes full height */
   margin: 20;    /* Remove default margin */
   background: white;
+  background-image: url('collage.png');
+      background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
 }
 
 .message-display {
-    position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width: 75%;
+  padding: 20px; /* Optional for some padding */
+
   font-size: 70px;
   line-height: 78px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  color: white;
+  width: 50%;
 }
 
 .App {
-  display: absolute;          /* Use flexbox for centering */
+  display: flex;          /* Use flexbox for centering */
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Center content vertically */
   align-items: center;    /* Center content horizontally */
   height: 100vh;          /* Full viewport height */
   text-align: center;     /* Center text */
+  flex-wrap: wrap;
+
 }
 
 button {
