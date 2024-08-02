@@ -14,7 +14,7 @@ export default function Player({
   // Automatically load the music when the component mounts
   useEffect(() => {
     const music = new Howl({
-      src: ['/mixtape.ogg'], // Update with your actual audio file path
+      src: ['to-stace/mixtape.ogg'], // Update with your actual audio file path
       html5: true,
       onload: () => {
         setSelectedMusic(music);
